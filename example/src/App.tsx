@@ -22,7 +22,7 @@ const innerBorderColor = '#30261a';
 const innerBorderWidth = 0;
 const innerRadius = 0;
 const radiusLineColor = '#eeeeee';
-const radiusLineWidth = 8;
+const radiusLineWidth = 0;
 const fontSize = 17;
 const textDistance = 60;
 const spinDuration = 1.0;
@@ -40,27 +40,30 @@ const App = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <Wheel
-          mustStartSpinning={mustSpin}
-          prizeNumber={prizeNumber}
-          data={data}
-          backgroundColors={backgroundColors}
-          textColors={textColors}
-          fontSize={fontSize}
-          outerBorderColor={outerBorderColor}
-          outerBorderWidth={outerBorderWidth}
-          innerRadius={innerRadius}
-          innerBorderColor={innerBorderColor}
-          innerBorderWidth={innerBorderWidth}
-          radiusLineColor={radiusLineColor}
-          radiusLineWidth={radiusLineWidth}
-          spinDuration={spinDuration}
-          // perpendicularText
-          textDistance={textDistance}
-          onStopSpinning={() => {
-            setMustSpin(false);
-          }}
-        />
+        <div className='wheel-block'>
+          <Wheel
+            mustStartSpinning={mustSpin}
+            prizeNumber={prizeNumber}
+            data={data}
+            backgroundColors={backgroundColors}
+            textColors={textColors}
+            fontSize={fontSize}
+            outerBorderColor={outerBorderColor}
+            outerBorderWidth={outerBorderWidth}
+            innerRadius={innerRadius}
+            innerBorderColor={innerBorderColor}
+            innerBorderWidth={innerBorderWidth}
+            radiusLineColor={radiusLineColor}
+            radiusLineWidth={radiusLineWidth}
+            spinDuration={spinDuration}
+            // perpendicularText
+            textDistance={textDistance}
+            onStopSpinning={() => {
+              setMustSpin(false);
+            }}
+          />
+          <div className="insideRadius">test</div>
+        </div>
         <button className={'spin-button'} onClick={handleSpinClick}>
           SPIN
         </button>

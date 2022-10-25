@@ -49,6 +49,8 @@
     "husky": "^4.2.5",
     "jest-canvas-mock": "^2.2.0",
     "prettier": "^2.0.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "styled-components": "^5.1.1",
     "ts-loader": "8.0.7",
     "typescript": "^4.2.2",

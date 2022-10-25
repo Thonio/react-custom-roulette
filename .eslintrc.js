@@ -13,6 +13,16 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'off',
     'no-use-before-define': 'off',
     'react/require-default-props': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+      },
+    ],
   },
   env: {
     jest: true,

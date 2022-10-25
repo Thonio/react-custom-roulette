@@ -118,6 +118,29 @@ const drawWheel = (
       ctx.closePath();
       ctx.stroke();
 
+      for (let j = 0; j < data.length; j++) {
+        const radiusAngle = startAngle + j * arc;
+        ctx.beginPath();
+        ctx.moveTo(
+          centerX + (outsideRadius - 1) * Math.cos(radiusAngle),
+          centerY + (outsideRadius - 1) * Math.sin(radiusAngle)
+        );
+        ctx.arc(
+          centerX + (outsideRadius - 1) * Math.cos(radiusAngle),
+          centerY + (outsideRadius - 1) * Math.sin(radiusAngle),
+          15,
+          0,
+          Math.PI * 2,
+          true
+        );
+        ctx.shadowColor = 'grey';
+        ctx.shadowBlur = 2;
+        ctx.shadowOffsetX = 2;
+        ctx.shadowOffsetY = 2;
+        ctx.closePath();
+        ctx.fill();
+      }
+
       // WHEEL INNER BORDER
       ctx.strokeStyle =
         innerBorderWidth <= 0 ? 'transparent' : innerBorderColor;
